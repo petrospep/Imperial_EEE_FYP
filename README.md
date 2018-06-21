@@ -1,4 +1,4 @@
-RUN main.py with input arguments as follow:
+exract data and RUN main.py with input arguments as follow:
 
 --filter_size', type=int, default='128', help='Convolutional Layer Filter Size',required=False
 
