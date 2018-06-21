@@ -58,7 +58,7 @@ def autoencoder(x,dim_z,noise_stddev,burst_error,O1=128,kapa=1,no_KL=1,determini
 
     ce=tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=x,logits=y2))
 
-    loss=30000*12*ce+no_KL*KL_divergence/kappa
+    loss=ce+no_KL*KL_divergence/kappa
 
     return y, loss, 30000*MSE, KL_divergence, PSNR,mu,sigma
 
